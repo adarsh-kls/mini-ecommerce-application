@@ -1,0 +1,33 @@
+/* Admin Reviews Management Styles */
+.admin-reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-reviews-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--admin-text-main);
+  margin: 0;
+}
+
+.admin-reviews-header p {
+  color: var(--admin-text-muted);
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.star-rating-display {
+  color: #f59e0b;
+  font-weight: 700;
+  letter-spacing: 1px;
+}

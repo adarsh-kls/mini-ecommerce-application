@@ -1,0 +1,177 @@
+/* Admin Orders Management Styles */
+.admin-orders-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-orders-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--admin-text-main);
+  margin: 0;
+}
+
+.admin-orders-header p {
+  color: var(--admin-text-muted);
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+/* Order Timeline Progress */
+.order-timeline-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.order-timeline-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--admin-border);
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.timeline-step {
+  position: relative;
+  z-index: 2;
+  background: var(--admin-card-bg);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: 1px solid var(--admin-border);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--admin-text-muted);
+}
+
+.timeline-step.completed {
+  background: var(--admin-primary);
+  border-color: var(--admin-primary);
+  color: #fff;
+}
+
+.timeline-step.cancelled {
+  background: var(--admin-danger);
+  border-color: var(--admin-danger);
+  color: #fff;
+}
+
+/* Invoice Printable Styling */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-invoice, .printable-invoice * {
+    visibility: visible;
+  }
+  .printable-invoice {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff !important;
+    color: #000 !important;
+    padding: 2rem;
+  }
+  .modal-overlay, .btn-close-modal, .no-print {
+    display: none !important;
+  }
+}
+
+.invoice-box {
+  background: #fff;
+  color: #1e293b;
+  border-radius: 12px;
+  padding: 2rem;
+  font-family: inherit;
+}
+
+.invoice-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.invoice-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.invoice-meta {
+  text-align: right;
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.invoice-address-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.invoice-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.invoice-table th {
+  background: #f8fafc;
+  color: #475569;
+  padding: 0.75rem;
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.invoice-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+}
+
+.invoice-total-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.invoice-total-box {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.invoice-total-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.invoice-total-row.grand {
+  font-weight: 800;
+  font-size: 1.1rem;
+  border-top: 2px solid #0f172a;
+  padding-top: 0.5rem;
+}

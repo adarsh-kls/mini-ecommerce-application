@@ -1,0 +1,36 @@
+/* Admin Categories Section Styles */
+.admin-categories-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-categories-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-categories-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--admin-text-main);
+  margin: 0;
+}
+
+.admin-categories-header p {
+  color: var(--admin-text-muted);
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.category-badge-count {
+  background: rgba(249, 115, 22, 0.12);
+  color: #c2410c;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}

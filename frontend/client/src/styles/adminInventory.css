@@ -1,0 +1,83 @@
+/* Admin Inventory Management Styles */
+.admin-inventory-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-inventory-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-inventory-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--admin-text-main);
+  margin: 0;
+}
+
+.admin-inventory-header p {
+  color: var(--admin-text-muted);
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.inventory-inline-stock {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-stock-inline {
+  width: 70px;
+  padding: 0.35rem 0.5rem;
+  background-color: var(--admin-bg);
+  border: 1px solid var(--admin-border);
+  border-radius: 6px;
+  color: var(--admin-text-main);
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  outline: none;
+}
+
+.input-stock-inline:focus {
+  border-color: var(--admin-primary);
+}
+
+.btn-stock-save {
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background: var(--admin-primary);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-stock-quick {
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid var(--admin-border);
+  background: #f3f4f6;
+  color: var(--admin-text-main);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-stock-quick:hover {
+  background: #e5e7eb;
+}
+
+.row-low-stock {
+  background-color: #fffbe6;
+}
+
+.row-out-stock {
+  background-color: #fff1f0;
+}
